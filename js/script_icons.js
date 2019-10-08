@@ -16,7 +16,7 @@ for (let i = 0; i < 100; i++) {
     const nodes = [...document.querySelectorAll(`.${NODE_CLS}`)];
     for (let i = 0; i < 8; i++) {
     nodes[i].classList.add(ACTIVE_CLS);
-    document.getElementById("info").innerHTML = "8 people out of 100  experience pain";
+    document.getElementById("info").innerHTML = "8 people out of 100  experience neuropathy";
 
 
   }
@@ -46,7 +46,7 @@ function change4() {
   const nodes = [...document.querySelectorAll(`.${NODE_CLS}`)];
   for (let i = 0; i < 29; i++) {
   nodes[i].classList.add(ACTIVE_CLS);
-  document.getElementById("info").innerHTML = "29 people out of 100  experience vommiting";
+  document.getElementById("info").innerHTML = "29 people out of 100  experience insomnia";
 
 
   }
@@ -56,7 +56,7 @@ function change5() {
   const nodes = [...document.querySelectorAll(`.${NODE_CLS}`)];
   for (let i = 0; i < 20; i++) {
   nodes[i].classList.add(ACTIVE_CLS);
-  document.getElementById("info").innerHTML = "42 people out of 100  experience vommiting";
+  document.getElementById("info").innerHTML = "42 people out of 100  experience diahrrea";
 
 
   }
