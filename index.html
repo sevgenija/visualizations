@@ -15,6 +15,15 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
   <link href="icons.css" rel="stylesheet">
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <!-- Resources pictogram-->
+  <script src="https://www.amcharts.com/lib/4/core.js"></script>
+  <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+  <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+  <script src="https://www.amcharts.com/lib/4/themes/frozen.js"></script>
+
+
     <!-- Include the above in your HEAD tag ---------->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -34,17 +43,125 @@
   <div class="animation">
 
 
-  <h4>Your class of potential risks from chemotherapy is 2.</h4>
-  <p>That means: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <h4>Your class of potential risks from chemotherapy is 3.</h4>
+  <p>You are allocated to the risk group 3 in regard to potential side effects
+    from chemotherapy. This means that in general people from the same risk group
+    as yours experience several problems affecting their lifestyles.</p>
+<p>Chemotherapy kills fast-growing cancer cells. But when the drugs travel throughout
+the body they affect healthy cells as well. The side effects related to chemotherapy
+are caused by the damage of these normal healthy cells. The side effects can vary,
+depending on the drug or combination of them. However, the most common ones, people
+in the same risk group as you might experience, are listed here.</p>
+<ul>
+<li><strong>Insomnia.</strong> Sleep problems such as being unable to fall asleep and/or stay asleep,
+also called insomnia, are common in your risk. Long-term insomnia might also
+cause depression and icrease anxiety.</li>
+<li><strong>Peripheral neuropathy.</strong> Peripheral neuropathy is a result of damage to the
+peripheral nerves. These nerves carry information from the brain to other parts
+of the body. Damage of these nerves can cause tingling, numbness, or a pins-and-needles
+feeling in your feet and hands, inability to feel pain or loosing hot and cold perception.
+Symptoms usually disappear after the treatment but there is a risk that neuropathy will have
+a long-term effect and turn into chronic peripheral neuropathy.</li>
+<li>....</li>
+<li>....</li>
+<li>....</li>
+</ul>
 
+<p>Some side effects disappear quite quickly, but for some of them it can take months
+or years to disappear completely. While side effects can be unpleasant, they must
+be accessed against the need to kill the cancer cells. The visualizations below might
+help you to imagine how many people in the same risk group experience these particular
+side effects. You can interact with the visualizations and receive information in different
+formats.</p>
+
+</p>
+
+<h4>Pictogram</h4>
+<p>Imagine that there are 100 people and some of them experience different side
+  effects from chemotherapy. This pictogram allows you to see how many people from your risk group
+  experience different side effects. All the quantaties are summed up to 100%.
+If you hover over the pictogram, in the brackets you can see the number of actual
+people suffering from these side effects.
+  to 100%
+amount</p>
   </div>
 
+  <!-- Pictorial visualization -->
+  <!-- Styles -->
+
+  <style>
+  #chartdiv {
+    width: 100%;
+    height: 500px;
+  }
+  </style>
+
+
+  <!-- Chart code -->
+  <script>
+  am4core.ready(function() {
+
+  // Themes begin
+  am4core.useTheme(am4themes_frozen);
+  am4core.useTheme(am4themes_animated);
+  // Themes end
+
+  var iconPath = "M53.5,476c0,14,6.833,21,20.5,21s20.5-7,20.5-21V287h21v189c0,14,6.834,21,20.5,21 c13.667,0,20.5-7,20.5-21V154h10v116c0,7.334,2.5,12.667,7.5,16s10.167,3.333,15.5,0s8-8.667,8-16V145c0-13.334-4.5-23.667-13.5-31 s-21.5-11-37.5-11h-82c-15.333,0-27.833,3.333-37.5,10s-14.5,17-14.5,31v133c0,6,2.667,10.333,8,13s10.5,2.667,15.5,0s7.5-7,7.5-13 V154h10V476 M61.5,42.5c0,11.667,4.167,21.667,12.5,30S92.333,85,104,85s21.667-4.167,30-12.5S146.5,54,146.5,42 c0-11.335-4.167-21.168-12.5-29.5C125.667,4.167,115.667,0,104,0S82.333,4.167,74,12.5S61.5,30.833,61.5,42.5z"
+
+
+
+  var chart = am4core.create("chartdiv", am4charts.SlicedChart);
+  chart.hiddenState.properties.opacity = 0; // this makes initial fade in effect
+
+  chart.data = [{
+      "name": "Pain",
+      "value": 8
+  }, {
+      "name": "Appetite loss",
+      "value": 15
+  }, {
+      "name": "Vommiting",
+      "value": 20
+  }, {
+      "name": "Insomnia",
+      "value": 29
+  }, {
+      "name": "Diarrhea",
+      "value": 42
+  }];
+
+  var series = chart.series.push(new am4charts.PictorialStackedSeries());
+  series.dataFields.value = "value";
+  series.dataFields.category = "name";
+  series.alignLabels = true;
+
+  series.maskSprite.path = iconPath;
+  series.ticks.template.locationX = 1;
+  series.ticks.template.locationY = 0.5;
+
+  series.labelsContainer.width = 200;
+
+  chart.legend = new am4charts.Legend();
+  chart.legend.position = "left";
+  chart.legend.valign = "bottom";
+
+  }); // end am4core.ready()
+  </script>
+
+  <!-- HTML -->
+  <div id="chartdiv"></div>
+
+<!--icon arrays-->
+
 <div class="animation">
-<h4>Explore more with visualization below</h4>
+<h4>Explore more</h4>
 <p>Press the buttons with different factors and see how many people out of 100 experience this particular side effect from chemotherapy. Press reset  button before exploring the other factors</p>
   <button  type="button" class="btn btn-success" id="btn-1" onclick="change()">pain</button>
   <button  type="button" class="btn btn-success"  id="btn-2" onclick="change2()">appetite loss</button>
   <button  type="button" class="btn btn-success"  id="btn-3" onclick="change3()">vommiting</button>
+  <button  type="button" class="btn btn-success"  id="btn-3" onclick="change4()">insomnia</button>
+  <button  type="button" class="btn btn-success"  id="btn-3" onclick="change5()">diarrhea</button>
+
   <button  type="button"  class="btn btn-danger" id="reset">reset</button>
 
   <div id="info">
@@ -114,64 +231,17 @@
 
 <div class="animation">
 
-    <h4>Compare all the factors</h4>
+    <h4>Compare all the factors with icon animation</h4>
             <p>Here icons of different colors represent different outcomes of the treatment. By pressing
              the button you can see animation presenting the risks of experiencing different side effects and compare them. The bigger
-          the icon the higher higher risk. You can also hover on the icon and see how many people experience this particular factor. </p>
+          the icon, the higher the risk is. You can also hover over the icon and see how many people experience this particular factor. </p>
             <button type="button" id="button" class="btn btn-danger">Press to compare</button>
 
             <div class="many-factors">
 
-              <div class="box transform" data-placement="right" data-toggle="tooltip"  data-container="body" title="20 persons">
-                Vommiting
-
-                <svg class="img-fluid" class="box transform" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-   viewBox="0 0 350 350" style="enable-background:new 0 0 350 350;" xml:space="preserve">
-<g>
-  <path d="M175,171.173c38.914,0,70.463-38.318,70.463-85.586C245.463,38.318,235.105,0,175,0s-70.465,38.318-70.465,85.587
-    C104.535,132.855,136.084,171.173,175,171.173z"/>
-  <path d="M41.909,301.853C41.897,298.971,41.885,301.041,41.909,301.853L41.909,301.853z"/>
-  <path d="M308.085,304.104C308.123,303.315,308.098,298.63,308.085,304.104L308.085,304.104z"/>
-  <path d="M307.935,298.397c-1.305-82.342-12.059-105.805-94.352-120.657c0,0-11.584,14.761-38.584,14.761
-    s-38.586-14.761-38.586-14.761c-81.395,14.69-92.803,37.805-94.303,117.982c-0.123,6.547-0.18,6.891-0.202,6.131
-    c0.005,1.424,0.011,4.058,0.011,8.651c0,0,19.592,39.496,133.08,39.496c113.486,0,133.08-39.496,133.08-39.496
-    c0-2.951,0.002-5.003,0.005-6.399C308.062,304.575,308.018,303.664,307.935,298.397z"/>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-</svg>
-              </div>
 
 
-              <div class="box1 transform1" data-toggle="tooltip" data-placement="right" data-container="body"  title="6 persons">
+              <div class="box1 transform1" data-toggle="tooltip" data-placement="right" data-container="body"  title="8 persons">
                 Pain
 
 
@@ -266,10 +336,159 @@
 <g>
 </g>
 </svg>
-              </div>
+</div>
 
 
-					</div>
+<div class="box transform" data-placement="right" data-toggle="tooltip"  data-container="body" title="20 persons">
+  Vommiting
+
+  <svg class="img-fluid" class="box transform" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+viewBox="0 0 350 350" style="enable-background:new 0 0 350 350;" xml:space="preserve">
+<g>
+<path d="M175,171.173c38.914,0,70.463-38.318,70.463-85.586C245.463,38.318,235.105,0,175,0s-70.465,38.318-70.465,85.587
+C104.535,132.855,136.084,171.173,175,171.173z"/>
+<path d="M41.909,301.853C41.897,298.971,41.885,301.041,41.909,301.853L41.909,301.853z"/>
+<path d="M308.085,304.104C308.123,303.315,308.098,298.63,308.085,304.104L308.085,304.104z"/>
+<path d="M307.935,298.397c-1.305-82.342-12.059-105.805-94.352-120.657c0,0-11.584,14.761-38.584,14.761
+s-38.586-14.761-38.586-14.761c-81.395,14.69-92.803,37.805-94.303,117.982c-0.123,6.547-0.18,6.891-0.202,6.131
+c0.005,1.424,0.011,4.058,0.011,8.651c0,0,19.592,39.496,133.08,39.496c113.486,0,133.08-39.496,133.08-39.496
+c0-2.951,0.002-5.003,0.005-6.399C308.062,304.575,308.018,303.664,307.935,298.397z"/>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+
+</div>
+
+
+<div class="box3 transform3" data-placement="right" data-toggle="tooltip"  data-container="body" title="29 persons">
+  Insomnia
+
+  <svg class="img-fluid" class="box transform" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+viewBox="0 0 350 350" style="enable-background:new 0 0 350 350;" xml:space="preserve">
+<g>
+<path d="M175,171.173c38.914,0,70.463-38.318,70.463-85.586C245.463,38.318,235.105,0,175,0s-70.465,38.318-70.465,85.587
+C104.535,132.855,136.084,171.173,175,171.173z"/>
+<path d="M41.909,301.853C41.897,298.971,41.885,301.041,41.909,301.853L41.909,301.853z"/>
+<path d="M308.085,304.104C308.123,303.315,308.098,298.63,308.085,304.104L308.085,304.104z"/>
+<path d="M307.935,298.397c-1.305-82.342-12.059-105.805-94.352-120.657c0,0-11.584,14.761-38.584,14.761
+s-38.586-14.761-38.586-14.761c-81.395,14.69-92.803,37.805-94.303,117.982c-0.123,6.547-0.18,6.891-0.202,6.131
+c0.005,1.424,0.011,4.058,0.011,8.651c0,0,19.592,39.496,133.08,39.496c113.486,0,133.08-39.496,133.08-39.496
+c0-2.951,0.002-5.003,0.005-6.399C308.062,304.575,308.018,303.664,307.935,298.397z"/>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+</div>
+
+
+
+<div class="box4 transform4" data-placement="right" data-toggle="tooltip"  data-container="body" title="42 persons">
+  Diarrhea
+
+  <svg class="img-fluid" class="box transform" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+viewBox="0 0 350 350" style="enable-background:new 0 0 350 350;" xml:space="preserve">
+<g>
+<path d="M175,171.173c38.914,0,70.463-38.318,70.463-85.586C245.463,38.318,235.105,0,175,0s-70.465,38.318-70.465,85.587
+C104.535,132.855,136.084,171.173,175,171.173z"/>
+<path d="M41.909,301.853C41.897,298.971,41.885,301.041,41.909,301.853L41.909,301.853z"/>
+<path d="M308.085,304.104C308.123,303.315,308.098,298.63,308.085,304.104L308.085,304.104z"/>
+<path d="M307.935,298.397c-1.305-82.342-12.059-105.805-94.352-120.657c0,0-11.584,14.761-38.584,14.761
+s-38.586-14.761-38.586-14.761c-81.395,14.69-92.803,37.805-94.303,117.982c-0.123,6.547-0.18,6.891-0.202,6.131
+c0.005,1.424,0.011,4.058,0.011,8.651c0,0,19.592,39.496,133.08,39.496c113.486,0,133.08-39.496,133.08-39.496
+c0-2.951,0.002-5.003,0.005-6.399C308.062,304.575,308.018,303.664,307.935,298.397z"/>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+</div>
+
+
+</div>
 
 </div>
 

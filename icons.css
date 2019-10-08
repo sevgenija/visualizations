@@ -19,8 +19,6 @@ body{
   margin-top: 30px;
 
 
-
-
 }
 
 .btn {
@@ -59,7 +57,7 @@ body{
 #info {
   margin: 20px 20px;
   padding: 20px;
-  background: #4f9ad9;
+  background: #696fd7;
   font-size: 18px;
   color: white;
   border-radius: 5px;
@@ -82,18 +80,19 @@ body{
 
 .animation {
   margin-top: 30px;
-  background: #e4e4e4;
+  /*background: #e4e4e4;*/
   border-radius: 20px;
   padding: 20px;
 
 }
 
 h4 {
-  padding: 20px;
+  padding: 20px 0 0 20px;
+  
 }
 
 p {
-  padding: 20px;
+  padding: 20px 0 0 20px;
 }
 
 .many-factors div {
@@ -111,9 +110,9 @@ p {
 
 
 .box svg {
-  fill: #218D9B;
-  height: 100px;
-  width: 100px;
+  fill: #696fd7;
+  height: 70px;
+  width: 70px;
 }
 
 .transform svg {
@@ -125,20 +124,20 @@ p {
 }
 
 .transform-active svg {
-  fill: #45CEE0;
-  height: 300px;
-  width: 300px;
-  -webkit-filter: drop-shadow( 20px 20px 0px rgba(0, 0, 0, .7)rgba(0, 0, 0, .7));
-  filter: drop-shadow(  20px 20px 0px  rgba(0, 0, 0, .7));
+
+  height: 120px;
+  width: 120px;
+  /*-webkit-filter: drop-shadow( 10px 10px 0px rgba(0, 0, 0, .7)rgba(0, 0, 0, .7));
+  filter: drop-shadow(  10px 10px 0px  rgba(0, 0, 0, .7));*/
 
 }
 
 /*Pain*/
 
 .box1 svg {
-  fill: #50aa91;
-  height: 100px;
-  width: 100px;
+  fill: #bfc4f4;
+  height: 70px;
+  width: 70px;
 }
 
 .transform1 svg {
@@ -150,24 +149,23 @@ p {
 }
 
 .transform1-active svg {
-  fill: #04c691;
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
   /* stroke: #39A02E;
    stroke-width: 5;
    stroke-opacity: .3; */
 
- -webkit-filter: drop-shadow( 10px 10px 0px rgba(0, 0, 0, .7)rgba(0, 0, 0, .7));
-  filter: drop-shadow(  10px 10px 0px  rgba(0, 0, 0, .7));
+ /*-webkit-filter: drop-shadow( 10px 10px 0px rgba(0, 0, 0, .7)rgba(0, 0, 0, .7));
+  filter: drop-shadow(  10px 10px 0px  rgba(0, 0, 0, .7));*/
 
 }
 
 /*Appetite loss*/
 
 .box2 svg {
-  fill: #e8ec6e;
-  height: 100px;
-  width: 100px;
+  fill: #a5ace9;
+  height: 70px;
+  width: 70px;
 }
 
 .transform2 svg {
@@ -179,16 +177,63 @@ p {
 }
 
 .transform2-active svg {
-  fill: #ece51d;
-  height: 200px;
-  width: 200px;
-  -webkit-filter: drop-shadow( 15px 15px 0px rgba(0, 0, 0, .7)rgba(0, 0, 0, .7));
-  filter: drop-shadow(  15px 15px 0px  rgba(0, 0, 0, .7));
+  height: 110px;
+  width: 110px;
+  /*-webkit-filter: drop-shadow( 10px 10px 0px rgba(0, 0, 0, .7)rgba(0, 0, 0, .7));
+  filter: drop-shadow(  10px 10px 0px  rgba(0, 0, 0, .7));*/
 
 
 }
 
+/*Insomnia*/
 
+.box3 svg {
+  fill: #4946c7;
+  height: 70px;
+  width: 70px;
+}
+
+.transform3 svg {
+  -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  -ms-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+.transform3-active svg {
+  height: 140px;
+  width: 140px;
+  /*-webkit-filter: drop-shadow( 10px 10px 0px rgba(0, 0, 0, .7)rgba(0, 0, 0, .7));
+  filter: drop-shadow(  10px 10px 0px  rgba(0, 0, 0, .7));*/
+
+
+}
+
+/*Diahhrea*/
+
+.box4 svg {
+  fill: #6a4289;
+  height: 70px;
+  width: 70px;
+}
+
+.transform4 svg {
+  -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  -ms-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+.transform4-active svg {
+  height: 160px;
+  width: 160px;
+/* -webkit-filter: drop-shadow( 10px 10px 0px rgba(0, 0, 0, .7)rgba(0, 0, 0, .7));
+  filter: drop-shadow(  10px 10px 0px  rgba(0, 0, 0, .7));*/
+
+
+}
 
 /* Media Queries */
 

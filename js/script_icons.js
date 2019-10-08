@@ -14,9 +14,9 @@ for (let i = 0; i < 100; i++) {
 
   function change() {
     const nodes = [...document.querySelectorAll(`.${NODE_CLS}`)];
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 8; i++) {
     nodes[i].classList.add(ACTIVE_CLS);
-    document.getElementById("info").innerHTML = "6 people out of 100  experience pain";
+    document.getElementById("info").innerHTML = "8 people out of 100  experience pain";
 
 
   }
@@ -42,6 +42,25 @@ function change3() {
   }
 }
 
+function change4() {
+  const nodes = [...document.querySelectorAll(`.${NODE_CLS}`)];
+  for (let i = 0; i < 29; i++) {
+  nodes[i].classList.add(ACTIVE_CLS);
+  document.getElementById("info").innerHTML = "29 people out of 100  experience vommiting";
+
+
+  }
+}
+
+function change5() {
+  const nodes = [...document.querySelectorAll(`.${NODE_CLS}`)];
+  for (let i = 0; i < 20; i++) {
+  nodes[i].classList.add(ACTIVE_CLS);
+  document.getElementById("info").innerHTML = "42 people out of 100  experience vommiting";
+
+
+  }
+}
 
 document.getElementById("reset").onclick = function refreshPage(){
     window.location.reload();
@@ -62,4 +81,12 @@ $("#button").click(function() {
 
 $("#button").click(function() {
   $('.transform2').toggleClass('transform2-active');
+});
+
+$("#button").click(function() {
+  $('.transform3').toggleClass('transform3-active');
+});
+
+$("#button").click(function() {
+  $('.transform4').toggleClass('transform4-active');
 });
