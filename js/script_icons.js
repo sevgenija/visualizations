@@ -54,7 +54,7 @@ function change4() {
 
 function change5() {
   const nodes = [...document.querySelectorAll(`.${NODE_CLS}`)];
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 42; i++) {
   nodes[i].classList.add(ACTIVE_CLS);
   document.getElementById("info").innerHTML = "42 people out of 100  experience diahrrea";
 
