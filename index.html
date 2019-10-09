@@ -44,27 +44,47 @@
 
 
   <h4>Potential side-effects from chemotherapy.</h4>
-  <p>People like you experience problems from chemotherapy, which affect their lifestyles.</p>
+  <p>People like you experience problems from chemotherapy, which have a big impact on their lifestyles.</p>
 <p>Chemotherapy kills fast-growing cancer cells. But when the drugs travel throughout
 the body they affect healthy cells as well. The side effects related to chemotherapy
 are caused by the damage of these healthy cells. The side effects can vary,
 depending on the drug or combination of them. However, the most common ones people
 in the same risk group as yours might experience are listed here.</p>
+<br>
 <ul>
+<li><strong>Nausea/vomiting. </strong> When chemotherapy drugs enter the body, sensors
+  in the digestive system and brain detect that it is a foreign substance, and your
+  body try to get rid of this foreign substances. Sometimes accute nausea and vomiting can be
+experienced on the day of chemotherapy and sometimes several days after.
+You would get the medicines to prevent vomiting, however Refractory
+vomiting might also take place as a side effect from chemotherapy. Refractory vomiting is when
+the medicamentations are given to you to prevent vomiting and nausea but they appear to not work.
+This means that your nausea and vomiting have become refractory or no longer respond to the drugs you’re getting to prevent it.
+Refractory vomiting may be caused after a few or even several chemo treatments. </li>
+<br>
+<li><strong>Diahrrea.</strong> Diahrrea is the common side effect of chemotherapy. The
+  Abdominal cramping is an early sign that diarrhea is complicated and needs aggressive treatment.
+Diahrrea leads to depletion of fluids and electrolytes and dehydration, which might cause hospitalization.
+The severity of diahrrea might vary and in some cases raise up to 6 stools per day.</li>
+<br>
+<li><strong>Appetite loss. </strong> Chemotherapy may affect your eating habbits
+  and cause appetite loss. This can lead to weight loss and depression. Other
+  things, such as trouble swallowing, pain, nausea, or vomiting can
+  decrease your appetite as well.  </li>
+<br>
 <li><strong>Insomnia.</strong> Sleep problems such as being unable to fall asleep and/or stay asleep,
-also called insomnia, are common in your risk. Long-term insomnia might also
+also called insomnia, are common in your risk group. Long-term insomnia might also
 cause depression and icrease anxiety.</li>
-<li><strong>Peripheral neuropathy.</strong> Peripheral neuropathy is a result of damage to the
-peripheral nerves. These nerves carry information from the brain to other parts
-of the body. Damage of these nerves can cause tingling, numbness, or a pins-and-needles
-feeling in your feet and hands, inability to feel pain or loosing hot and cold perception.
-Symptoms usually disappear after the treatment but there is a risk that neuropathy will have
-a long-term effect and turn into chronic peripheral neuropathy.</li>
-<li>....</li>
-<li>....</li>
-<li>....</li>
+<br>
+<li><strong>Fatigue. </strong> The cancer related fatigue is different from the fatigue
+in daily life. It can be described as feeling weak, listless, drained, or “washed out.”
+Some people even feel tired to eat or go to the bathroom. Rest or sleep might not help and
+any type of activity can be exhausting. You may feel week and low on energy and can't
+concentrate or focus on things. This may also affect your work or social life. Most often
+cancer related fatigue is provoked by anemia (low blood cell count), which is caused by
+chemotherapy and cancer itself. If chemotherapy is given in cycles, fatigue will get worse
+towards the later cycles.</li>
 </ul>
-
 <p>Some side effects disappear quite quickly, but for some of them it can take months
 or years to disappear completely. While side effects can be unpleasant, they must
 be accessed against the need to kill the cancer cells. The visualizations below might
@@ -72,13 +92,13 @@ help you to imagine how many people in the same risk group experience these part
 side effects. You can interact with the visualizations and receive information in different
 formats.</p>
 
-</p>
+
 
 <h4>Pictogram</h4>
 <p>Imagine that there are 100 people and some of them experience different side
   effects from chemotherapy. This pictogram allows you to see how many people out of 100
   from your risk group experience different side effects. If you want to decrease the amount of factors to be shown to you
-or compare, for example, only two factors, in the legend you can disable them and make not visible</p>
+or compare, for example, only two factors, press the checkboxes in the legend and disable them.</p>
   </div>
 
   <!-- Pictorial visualization -->
@@ -109,20 +129,20 @@ or compare, for example, only two factors, in the legend you can disable them an
   chart.hiddenState.properties.opacity = 0; // this makes initial fade in effect
 
   chart.data = [{
-      "name": "Neuropathy",
+      "name": "Insomnia",
       "value": 8
   }, {
-      "name": "Appetite loss",
+      "name": "Fatigue",
       "value": 15
   }, {
-      "name": "Vommiting",
+      "name": "Appetite loss",
       "value": 20
   }, {
-      "name": "Insomnia",
+      "name": "Diahrrea",
       "value": 29
   }, {
-      "name": "Diarrhea",
-      "value": 42
+      "name": "Vomiting",
+      "value": 38
   }];
 
   var series = chart.series.push(new am4charts.PictorialStackedSeries());
@@ -157,11 +177,11 @@ series.slices.template.tooltipText = "{category}: {value.value}";
 <div class="animation">
 <h4>Explore more</h4>
 <p>Press the buttons with different factors and see how many people out of 100 experience this particular side effect from chemotherapy. Press reset  button before exploring the other factors</p>
-  <button  type="button" class="btn btn-success" id="btn-1" onclick="change()">neuropathy</button>
-  <button  type="button" class="btn btn-success"  id="btn-2" onclick="change2()">appetite loss</button>
-  <button  type="button" class="btn btn-success"  id="btn-3" onclick="change3()">vommiting</button>
-  <button  type="button" class="btn btn-success"  id="btn-3" onclick="change4()">insomnia</button>
-  <button  type="button" class="btn btn-success"  id="btn-3" onclick="change5()">diarrhea</button>
+  <button  type="button" class="btn btn-success" id="btn-1" onclick="change()">insomnia</button>
+  <button  type="button" class="btn btn-success"  id="btn-2" onclick="change2()">fatigue</button>
+  <button  type="button" class="btn btn-success"  id="btn-3" onclick="change3()">appetite loss</button>
+  <button  type="button" class="btn btn-success"  id="btn-3" onclick="change4()">diahrrea</button>
+  <button  type="button" class="btn btn-success"  id="btn-3" onclick="change5()">nausea/vomiting</button>
 
   <button  type="button"  class="btn btn-danger" id="reset">reset</button>
 
@@ -243,7 +263,7 @@ series.slices.template.tooltipText = "{category}: {value.value}";
 
 
               <div class="box1 transform1" data-toggle="tooltip" data-placement="right" data-container="body"  title="8 persons">
-                Neuropathy
+                Insomnia
 
 
                 <svg class="img-fluid"  class="box1 transform1"  version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -293,7 +313,7 @@ series.slices.template.tooltipText = "{category}: {value.value}";
               </div>
 
               <div class="box2 transform2" data-toggle="tooltip" data-placement="right" data-container="body"title="15 persons">
-                Appetite loss
+                Fatigue
                 <svg class="img-fluid"  class="box2 transform2" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
    viewBox="0 0 350 350" style="enable-background:new 0 0 350 350;" xml:space="preserve">
 <g>
@@ -341,7 +361,7 @@ series.slices.template.tooltipText = "{category}: {value.value}";
 
 
 <div class="box transform" data-placement="right" data-toggle="tooltip"  data-container="body" title="20 persons">
-  Vommiting
+  Appetite loss
 
   <svg class="img-fluid" class="box transform" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 viewBox="0 0 350 350" style="enable-background:new 0 0 350 350;" xml:space="preserve">
@@ -391,7 +411,7 @@ c0-2.951,0.002-5.003,0.005-6.399C308.062,304.575,308.018,303.664,307.935,298.397
 
 
 <div class="box3 transform3" data-placement="right" data-toggle="tooltip"  data-container="body" title="29 persons">
-  Insomnia
+  Diahrrea
 
   <svg class="img-fluid" class="box transform" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 viewBox="0 0 350 350" style="enable-background:new 0 0 350 350;" xml:space="preserve">
@@ -440,8 +460,8 @@ c0-2.951,0.002-5.003,0.005-6.399C308.062,304.575,308.018,303.664,307.935,298.397
 
 
 
-<div class="box4 transform4" data-placement="right" data-toggle="tooltip"  data-container="body" title="42 persons">
-  Diarrhea
+<div class="box4 transform4" data-placement="right" data-toggle="tooltip"  data-container="body" title="38 persons">
+  Nausea/vomiting
 
   <svg class="img-fluid" class="box transform" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 viewBox="0 0 350 350" style="enable-background:new 0 0 350 350;" xml:space="preserve">
