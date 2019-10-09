@@ -43,10 +43,8 @@
   <div class="animation">
 
 
-  <h4>Your class of potential risks from chemotherapy is 3.</h4>
-  <p>You are allocated to the risk group 3 in regard to potential side effects
-    from chemotherapy. This means that in general people from the same risk group
-    as yours experience several problems affecting their lifestyles.</p>
+  <h4>Potential side-effects from chemotherapy.</h4>
+  <p>People like you experience problems from chemotherapy, which affect their lifestyles.</p>
 <p>Chemotherapy kills fast-growing cancer cells. But when the drugs travel throughout
 the body they affect healthy cells as well. The side effects related to chemotherapy
 are caused by the damage of these healthy cells. The side effects can vary,
@@ -78,10 +76,9 @@ formats.</p>
 
 <h4>Pictogram</h4>
 <p>Imagine that there are 100 people and some of them experience different side
-  effects from chemotherapy. This pictogram allows you to see how many people from your risk group
-  experience different side effects. All the quantaties are summed up to 100%.
-If you hover over the pictogram, in the brackets you can see the number of actual
-people suffering from these side effects.</p>
+  effects from chemotherapy. This pictogram allows you to see how many people out of 100
+  from your risk group experience different side effects. If you want to decrease the amount of factors to be shown to you
+or compare, for example, only two factors, in the legend you can disable them and make not visible</p>
   </div>
 
   <!-- Pictorial visualization -->
@@ -133,6 +130,11 @@ people suffering from these side effects.</p>
   series.dataFields.category = "name";
   series.alignLabels = true;
 
+series.labels.template.text = "{category}: [bold]{value}[/]";
+series.slices.template.tooltipText = "{category}: {value.value}";
+//series.labels.template.text = "{category}: {value.value}";
+
+
   series.maskSprite.path = iconPath;
   series.ticks.template.locationX = 1;
   series.ticks.template.locationY = 0.5;
@@ -142,6 +144,7 @@ people suffering from these side effects.</p>
   chart.legend = new am4charts.Legend();
   chart.legend.position = "left";
   chart.legend.valign = "bottom";
+  chart.legend.valueLabels.template.text = "";
 
   }); // end am4core.ready()
   </script>
