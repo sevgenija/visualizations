@@ -46,7 +46,7 @@ function change4() {
   const nodes = [...document.querySelectorAll(`.${NODE_CLS}`)];
   for (let i = 0; i < 29; i++) {
   nodes[i].classList.add(ACTIVE_CLS);
-  document.getElementById("info").innerHTML = "29 people out of 100  experience diahrrea";
+  document.getElementById("info").innerHTML = "29 people out of 100  experience diarrhea";
 
 
   }
