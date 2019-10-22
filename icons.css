@@ -1,7 +1,8 @@
 
 body{
-  padding: 20px;
+  
   counter-reset: section;
+  font-size: 14px;
 
 
 }
@@ -16,7 +17,7 @@ body{
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  margin-top: 30px;
+
 
 
 }
@@ -88,7 +89,8 @@ body{
 
 h4 {
   padding: 20px 0 0 20px;
-  
+
+
 }
 
 p {
@@ -232,27 +234,5 @@ p {
 /* -webkit-filter: drop-shadow( 10px 10px 0px rgba(0, 0, 0, .7)rgba(0, 0, 0, .7));
   filter: drop-shadow(  10px 10px 0px  rgba(0, 0, 0, .7));*/
 
-
-}
-
-/* Media Queries */
-
-
-@media screen and (max-width: 767px) {
-  body {
-    font-size: 14px;
-  }
-  footer {
-    font-size: 12px
-  }
-}
-
-@media only screen and ( max-width : 568px ) {
-    .cover h1 {
-        font-size: 40px;
-    }
-    section {
-        padding: 20px;
-    }
 
 }
