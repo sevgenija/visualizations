@@ -13,18 +13,18 @@ for (let i = 0; i < 100; i++) {
 
   function change() {
     const nodes = [...document.querySelectorAll(`.${NODE_CLS}`)];
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 4; i++) {
     nodes[i].classList.add(ACTIVE_CLS);
-    document.getElementById("info").innerHTML = "8 people out of 100  experience insomnia";
+    document.getElementById("info").innerHTML = "4 people out of 100  experience insomnia";
   }
 }
 
 
 function change2() {
   const nodes = [...document.querySelectorAll(`.${NODE_CLS}`)];
-  for (let i = 0; i < 15; i++) {
+  for (let i = 0; i < 7; i++) {
   nodes[i].classList.add(ACTIVE_CLS);
-  document.getElementById("info").innerHTML = "15 people out of 100  experience fatigue";
+  document.getElementById("info").innerHTML = "7 people out of 100  experience fatigue";
 
 
   }
@@ -32,9 +32,9 @@ function change2() {
 
 function change3() {
   const nodes = [...document.querySelectorAll(`.${NODE_CLS}`)];
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 10; i++) {
   nodes[i].classList.add(ACTIVE_CLS);
-  document.getElementById("info").innerHTML = "20 people out of 100  experience appetite loss";
+  document.getElementById("info").innerHTML = "10 people out of 100  experience appetite loss";
 
 
   }
@@ -42,9 +42,9 @@ function change3() {
 
 function change4() {
   const nodes = [...document.querySelectorAll(`.${NODE_CLS}`)];
-  for (let i = 0; i < 29; i++) {
+  for (let i = 0; i < 14; i++) {
   nodes[i].classList.add(ACTIVE_CLS);
-  document.getElementById("info").innerHTML = "29 people out of 100  experience diarrhea";
+  document.getElementById("info").innerHTML = "14 people out of 100  experience diarrhea";
 
 
   }
@@ -52,9 +52,9 @@ function change4() {
 
 function change5() {
   const nodes = [...document.querySelectorAll(`.${NODE_CLS}`)];
-  for (let i = 0; i < 38; i++) {
+  for (let i = 0; i < 19; i++) {
   nodes[i].classList.add(ACTIVE_CLS);
-  document.getElementById("info").innerHTML = "38 people out of 100  experience nausea/vomiting";
+  document.getElementById("info").innerHTML = "19 people out of 100  experience nausea/vomiting";
 
 
   }
