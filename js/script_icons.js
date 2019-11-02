@@ -1,5 +1,4 @@
 
-
 const template = document.getElementById('chel');
 const container = document.querySelector('.container');
 
@@ -17,10 +16,9 @@ for (let i = 0; i < 100; i++) {
     for (let i = 0; i < 8; i++) {
     nodes[i].classList.add(ACTIVE_CLS);
     document.getElementById("info").innerHTML = "8 people out of 100  experience insomnia";
-
-
   }
 }
+
 
 function change2() {
   const nodes = [...document.querySelectorAll(`.${NODE_CLS}`)];
